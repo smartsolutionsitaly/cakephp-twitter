@@ -9,7 +9,7 @@
   "type": "cakephp-plugin",
   "license": "MIT",
   "require": {
-    "php": "^7.0",
+    "php": "^7.1",
     "abraham/twitteroauth": "^0.7.4"
   },
   "require-dev": {
