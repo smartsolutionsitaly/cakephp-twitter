@@ -149,4 +149,13 @@ class TwitterClient
             return [];
         }
     }
+
+    /**
+     * Gets the credentials.
+     * @return array|object The credentials.
+     */
+    public function getCredentials()
+    {
+        return $this->_client->get('account/verify_credentials');
+    }
 }
