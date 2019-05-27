@@ -18,7 +18,7 @@
  * @since     1.0.0
  */
 
-namespace App\View\Helper;
+namespace SmartSolutionsItaly\CakePHP\Twitter\View\Helper;
 
 use Cake\Core\Configure;
 use Cake\View\Helper;
@@ -26,7 +26,7 @@ use Cake\View\StringTemplateTrait;
 
 /**
  * Provides methods used in Twitter page configuration.
- * @package App\View\Helper
+ * @package SmartSolutionsItaly\CakePHP\Twitter\View\Helper
  * @author Lucio Benini <dev@smartsolutions.it>
  * @since 1.0.0
  */
