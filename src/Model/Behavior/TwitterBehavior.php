@@ -46,22 +46,25 @@ class TwitterBehavior extends Behavior
      * Finder for Twitter user feed.
      * Adds a formatter to the query.
      * @param Query $query The query object.
-     * @param array $options Query options. May contains "count" and "field" elements.
+     * @param array $options Query options. May contains "count", "field" and "property" elements.
      * @return Query The query object.
      */
     public function findTweets(Query $query, array $options): Query
     {
         $options = $options + [
                 'count' => (int)$this->getConfig('count'),
-                'field' => (string)$this->getConfig('field')
+                'field' => (string)$this->getConfig('field'),
+                'property' => 'tweets'
             ];
 
         return $query
             ->formatResults(function (CollectionInterface $results) use ($options) {
                 return $results->map(function ($row) use ($options) {
-                    if (!empty($row[$options['field']]) && !is_array($row[$options['field']])) {
+                    $row[$options['property']] = [];
+
+                    if (!empty($row[$options['field']])) {
                         $client = new TwitterClient;
-                        $row[$options['field']] = $client->getTimeline($row[$options['field']], (int)$options['count']);
+                        $row[$options['property']] = $client->getTimeline($row[$options['field']], (int)$options['count']);
                     }
 
                     return $row;
