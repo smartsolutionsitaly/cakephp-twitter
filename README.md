@@ -4,7 +4,7 @@
 [![issues](https://img.shields.io/github/issues/smartsolutionsitaly/cakephp-twitter.svg)](https://github.com/smartsolutionsitaly/cakephp-twitter/issues)
 [![CakePHP](https://img.shields.io/badge/CakePHP-3.6%2B-brightgreen.svg)](https://github.com/cakephp/cakephp)
 
-Twitter client and helpers for CakePHP [CakePHP](https://github.com/cakephp/cakephp)
+Twitter client and helpers for [CakePHP](https://github.com/cakephp/cakephp)
 
 ## Installation
 You can install _cakephp-twitter_ into your project using [Composer](https://getcomposer.org).
